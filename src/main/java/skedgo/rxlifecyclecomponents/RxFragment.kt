@@ -1,6 +1,8 @@
 package skedgo.rxlifecyclecomponents
 
+import android.content.Context
 import android.os.Bundle
+import android.support.annotation.CallSuper
 import android.support.annotation.CheckResult
 import android.support.v4.app.Fragment
 import android.view.View
@@ -28,8 +30,9 @@ abstract class RxFragment : Fragment(), LifecycleProvider<FragmentEvent> {
     return RxLifecycleAndroid.bindFragment(lifecycleSubject)
   }
 
-  override fun onAttach(activity: android.app.Activity?) {
-    super.onAttach(activity)
+  @CallSuper
+  override fun onAttach(context: Context?) {
+    super.onAttach(context)
     lifecycleSubject.onNext(FragmentEvent.ATTACH)
   }
 

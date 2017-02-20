@@ -1,5 +1,6 @@
 package skedgo.rxlifecyclecomponents
 
+import android.content.Context
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.annotation.CheckResult
@@ -30,8 +31,8 @@ abstract class RxAppCompatDialogFragment : AppCompatDialogFragment(), LifecycleP
   }
 
   @CallSuper
-  override fun onAttach(activity: android.app.Activity?) {
-    super.onAttach(activity)
+  override fun onAttach(context: Context?) {
+    super.onAttach(context)
     lifecycleSubject.onNext(FragmentEvent.ATTACH)
   }
 
