@@ -21,12 +21,17 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 repositories {
   jcenter()
-  maven { url "https://jitpack.io" }
 }
 
 android {
   compileSdkVersion 25
   buildToolsVersion '25.0.2'
+
+  compileOptions {
+    kotlinOptions {
+      freeCompilerArgs = ["-module-name", "RxLifecycleComponents"]
+    }
+  }
 
   defaultConfig {
     minSdkVersion 15
