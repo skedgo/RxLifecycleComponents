@@ -1,6 +1,6 @@
 buildscript {
-  ext.androidPluginVersion = '3.1.0'
-  ext.kotlinVersion = '1.2.30'
+  ext.androidPluginVersion = '3.2.1'
+  ext.kotlinVersion = '1.2.71'
 
   repositories {
     google()
@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-  provided "com.android.support:appcompat-v7:27.1.0"
+  provided "androidx.appcompat:appcompat:1.0.0"
   provided 'com.trello:rxlifecycle:1.0'
   provided 'io.reactivex:rxjava:1.2.4'
   provided "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
