@@ -31,7 +31,7 @@ abstract class RxFragment : Fragment(), LifecycleProvider<FragmentEvent> {
   }
 
   @CallSuper
-  override fun onAttach(context: Context?) {
+  override fun onAttach(context: Context) {
     super.onAttach(context)
     lifecycleSubject.onNext(FragmentEvent.ATTACH)
   }
