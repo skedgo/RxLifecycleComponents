@@ -1,9 +1,9 @@
 package skedgo.rxlifecyclecomponents
 
 import android.os.Bundle
-import android.support.annotation.CallSuper
-import android.support.annotation.CheckResult
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.CallSuper
+import androidx.annotation.CheckResult
+import androidx.appcompat.app.AppCompatActivity
 import com.trello.rxlifecycle.LifecycleProvider
 import com.trello.rxlifecycle.LifecycleTransformer
 import com.trello.rxlifecycle.RxLifecycle

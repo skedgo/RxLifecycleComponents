@@ -2,10 +2,10 @@ package skedgo.rxlifecyclecomponents
 
 import android.content.Context
 import android.os.Bundle
-import android.support.annotation.CallSuper
-import android.support.annotation.CheckResult
-import android.support.v7.app.AppCompatDialogFragment
+import androidx.annotation.CallSuper
+import androidx.annotation.CheckResult
 import android.view.View
+import androidx.appcompat.app.AppCompatDialogFragment
 import com.trello.rxlifecycle.LifecycleProvider
 import com.trello.rxlifecycle.LifecycleTransformer
 import com.trello.rxlifecycle.RxLifecycle
@@ -31,7 +31,7 @@ abstract class RxAppCompatDialogFragment : AppCompatDialogFragment(), LifecycleP
   }
 
   @CallSuper
-  override fun onAttach(context: Context?) {
+  override fun onAttach(context: Context) {
     super.onAttach(context)
     lifecycleSubject.onNext(FragmentEvent.ATTACH)
   }
